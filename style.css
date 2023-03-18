@@ -1,0 +1,23 @@
+body{
+    /* background: rgb(238,174,202); */
+/* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+}
+
+.postscontent{
+    font-weight: 500;
+}
+
+/* fonts 
+font-family: 'Great Vibes', cursive;
+font-family: 'Poppins', sans-serif;
+*/
+
+.navbar-brand{
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+td{
+    height: 120px;
+}
