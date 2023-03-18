@@ -18,7 +18,7 @@ if (isset($_GET["commentsubmit"])) {
     $referenceid = $_GET["referenceid"];
     $comment = $_GET["comment"];
     $commentauthor = $_GET["commentauthor"];
-    
+
     $query = "INSERT INTO comments(comment,author,referenceid) VALUES('$comment','$commentauthor','$referenceid')";
     if (mysqli_query($link, $query)) {
         echo '<script>
@@ -124,8 +124,8 @@ if (isset($_GET["commentsubmit"])) {
 
 
 
-    <?php include "./includes/footer-scripts.php";?>
-    <?php include "./includes/footer.php";?>
+    <?php include "./includes/footer-scripts.php"; ?>
+    <?php include "./includes/footer.php"; ?>
 
     <script>
         button = document.getElementById("commentbutton");
@@ -143,5 +143,6 @@ if (isset($_GET["commentsubmit"])) {
 </body>
 
 
-<?php include("./includes/footer-scripts.php");?>
+<?php include("./includes/footer-scripts.php"); ?>
+
 </html>

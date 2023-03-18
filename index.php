@@ -10,14 +10,14 @@ $_SESSION['username'] = $name;
 
 $uid = $_SESSION['id'];
 
-if(!isset($_GET['cart'])){
-  if(empty($_SESSION['cart'])){
-    $_SESSION['cart']=array();
+if (!isset($_GET['cart'])) {
+  if (empty($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
   }
 }
 
-if(!isset($_GET['dbp'])){
-  if(empty($_SESSION['dbp'])){
+if (!isset($_GET['dbp'])) {
+  if (empty($_SESSION['dbp'])) {
     $_SESSION['dbp'] = array();
   }
 }
@@ -71,16 +71,16 @@ if(!isset($_GET['dbp'])){
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<div class="container my-5">
-  <div class="row d-flex justify-content-evenly">
-    <div class="col-sm-12 col-md-4">
-      <a class="btn btn-outline-primary" href="./blog.php">Click Here to Visit Blog</a>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <a class="btn btn-outline-primary" href="#books">Click Here For Book</a>
+  <div class="container my-5">
+    <div class="row d-flex justify-content-evenly">
+      <div class="col-sm-12 col-md-4 my-2">
+        <a class="btn btn-outline-primary" href="./blog.php">Click Here to Visit Blog</a>
+      </div>
+      <div class="col-sm-12 col-md-4 my-2">
+        <a class="btn btn-outline-primary" href="#books">Click Here For Book</a>
+      </div>
     </div>
   </div>
-</div>
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12">
@@ -101,16 +101,16 @@ if(!isset($_GET['dbp'])){
       ?>
             <div class="col-sm-12 col-md-4 my-5">
               <div class="card" style="width: 20rem;">
-                <img src="<?php echo $row['bookimagelocation'];?>" class="card-img-top" alt="Books">
+                <img src="<?php echo $row['bookimagelocation']; ?>" class="card-img-top" alt="Books">
                 <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['booktitle'];?> </h5>
-                  <p class="card-text">By <?php echo $row['bookauthor'];?></p>
-                  <h4 class="text-success">&#8377; <?php echo $row['discountbookprice'];?></h4>
-                  <p class="text-danger text-decoration-line-through">&#8377; <?php echo $row['bookprice'];?></p>
+                  <h5 class="card-title"><?php echo $row['booktitle']; ?> </h5>
+                  <p class="card-text">By <?php echo $row['bookauthor']; ?></p>
+                  <h4 class="text-success">&#8377; <?php echo $row['discountbookprice']; ?></h4>
+                  <p class="text-danger text-decoration-line-through">&#8377; <?php echo $row['bookprice']; ?></p>
                   <div class="d-flex justify-content-evenly">
                     <form action="" method="get">
-                    <a href="singleproduct.php?price=<?php echo $row['discountbookprice'];?>&valid=200" class="btn btn-outline-success">Buy Now</a>
-                    <a type="submit" href="addtocart.php?id=<?php echo $row['id'];?>&dbp=<?php echo $row['discountbookprice'];?>&valid=200" class="btn btn-outline-primary" name="cart">Add to cart</a>
+                      <a href="singleproduct.php?price=<?php echo $row['discountbookprice']; ?>&valid=200" class="btn btn-outline-success">Buy Now</a>
+                      <a type="submit" href="addtocart.php?id=<?php echo $row['id']; ?>&dbp=<?php echo $row['discountbookprice']; ?>&valid=200" class="btn btn-outline-primary" name="cart">Add to cart</a>
                     </form>
                   </div>
                 </div>
