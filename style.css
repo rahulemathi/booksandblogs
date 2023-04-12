@@ -21,3 +21,14 @@ font-family: 'Poppins', sans-serif;
 td{
     height: 120px;
 }
+
+
+.nav-item .nav-link{
+    color: white !important;
+}
+
+.body{
+    background-color: #e5e5f7;
+
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 4px ), repeating-linear-gradient( #45f75d55, #45f75d );
+}

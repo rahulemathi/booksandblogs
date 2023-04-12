@@ -45,14 +45,14 @@ if (isset($_GET["commentsubmit"])) {
     <?php include "./includes/navbar.php" ?>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 my-3">
                 <h3>Welcome <?php echo $name; ?></h3>
             </div>
             <div class="col-sm-12 col-md-12">
-                <a href="add-post.php" class="btn btn-success">Add a new Post</a>
+                <a href="add-post.php" class="btn btn-success">&plus;</a>
 
             </div>
         </div>
@@ -69,7 +69,7 @@ if (isset($_GET["commentsubmit"])) {
                         $_SESSION['cid'] = $pid;
             ?>
                         <div class="col-sm-12 col-md-8 my-2 posts">
-                            <h3><?php echo $row['poststitle']; ?></h3>
+                            <h3 class="text-success"><?php echo $row['poststitle']; ?></h3>
                             <p><?php echo $row['postdate']; ?></p>
                             <p class="postscontent"><?php $content = $row['postcontent'];
                                                     if (strlen($content) > 300) {
@@ -103,7 +103,7 @@ if (isset($_GET["commentsubmit"])) {
                         <input class="form-control rounded-pill" id="commentbutton" type="text" name="comment" placeholder="Comment" onkeyup="openbutton()">
                         <input type="text" name="referenceid" value="<?php echo $row['id']; ?>" style="display:none">
                         <input type="text" name="commentauthor" value="<?php echo $name; ?>" style="display:none;">
-                        <button class="btn btn-primary mt-2 mx-2 rounded-pill" id="button" type="submit" data-toggle="tooltip" data-placement="top" title="Click to submit" name="commentsubmit"><i class="bi bi-caret-right-fill"></i></button>
+                        <button class="btn btn-success mt-2 mx-2 rounded-pill" id="button" type="submit" data-toggle="tooltip" data-placement="top" title="Click to submit" name="commentsubmit"><i class="bi bi-caret-right-fill"></i></button>
                     </form>
                 </div>
                 </p>

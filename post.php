@@ -58,12 +58,12 @@ if (isset($_GET["commentsubmit"])) {
     <?php include "./includes/navbar.php" ?>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <div class="row">
 
             <div class="col-sm-12 col-md-8 my-3 posts">
-                <h3><?php echo $posttitle ?></h3>
+                <h3 class="text-success"><?php echo $posttitle ?></h3>
                 <p><?php echo $postdate; ?></p>
                 <p class="postscontent"><?php echo $postcontent; ?>
                     <br> <b>By <?php echo $author; ?></b>
